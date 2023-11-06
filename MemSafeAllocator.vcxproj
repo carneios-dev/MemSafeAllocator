@@ -19,15 +19,17 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\dllmain.cpp" />
-    <ClCompile Include="src\memsafe_allocator.cpp" />
+    <ClCompile Include="src\FirstFitStrategy.cpp" />
+    <ClCompile Include="src\MemoryAllocator.cpp" />
     <ClCompile Include="src\pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\AllocationStrategy.h" />
+    <ClInclude Include="include\FirstFitStrategy.h" />
     <ClInclude Include="include\framework.h" />
-    <ClInclude Include="include\memsafe_allocator.h" />
+    <ClInclude Include="include\MemoryAllocator.h" />
     <ClInclude Include="include\pch.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -125,6 +127,8 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalIncludeDirectories>E:\Windows_Development\Projects\MemSafeAllocator\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
